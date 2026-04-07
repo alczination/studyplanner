@@ -1,0 +1,14 @@
+C:\Development\todo-app\bin\Debug\net8.0-windows\App.exe
+C:\Development\todo-app\bin\Debug\net8.0-windows\App.deps.json
+C:\Development\todo-app\bin\Debug\net8.0-windows\App.runtimeconfig.json
+C:\Development\todo-app\bin\Debug\net8.0-windows\App.dll
+C:\Development\todo-app\bin\Debug\net8.0-windows\App.pdb
+C:\Development\todo-app\obj\Debug\net8.0-windows\App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Development\todo-app\obj\Debug\net8.0-windows\App.AssemblyInfoInputs.cache
+C:\Development\todo-app\obj\Debug\net8.0-windows\App.AssemblyInfo.cs
+C:\Development\todo-app\obj\Debug\net8.0-windows\App.csproj.CoreCompileInputs.cache
+C:\Development\todo-app\obj\Debug\net8.0-windows\App.dll
+C:\Development\todo-app\obj\Debug\net8.0-windows\refint\App.dll
+C:\Development\todo-app\obj\Debug\net8.0-windows\App.pdb
+C:\Development\todo-app\obj\Debug\net8.0-windows\App.genruntimeconfig.cache
+C:\Development\todo-app\obj\Debug\net8.0-windows\ref\App.dll
