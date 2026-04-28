@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Development\\todo-app\\App.csproj": {}
+    "D:\\dev\\active\\StudyPlanner\\studyplanner\\App.csproj": {}
   },
   "projects": {
-    "C:\\Development\\todo-app\\App.csproj": {
+    "D:\\dev\\active\\StudyPlanner\\studyplanner\\App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Development\\todo-app\\App.csproj",
+        "projectUniqueName": "D:\\dev\\active\\StudyPlanner\\studyplanner\\App.csproj",
         "projectName": "App",
-        "projectPath": "C:\\Development\\todo-app\\App.csproj",
-        "packagesPath": "C:\\Users\\Alan\\.nuget\\packages\\",
-        "outputPath": "C:\\Development\\todo-app\\obj\\",
+        "projectPath": "D:\\dev\\active\\StudyPlanner\\studyplanner\\App.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\dev\\active\\StudyPlanner\\studyplanner\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Alan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0-windows"
