@@ -8,6 +8,7 @@ public class MyForm : Form
 {
     private Sidebar appSidebar;
     private Panel contentArea;
+    private List<TaskItem> allTasks = new List<TaskItem>();
 
     public MyForm()
     {
@@ -16,7 +17,7 @@ public class MyForm : Form
     private void InitComponents()
     {
         this.Text = "Todo App";
-        this.ClientSize = new Size(1000, 600);
+        this.ClientSize = new Size(1400, 750);
         this.CenterToScreen();
 
         appSidebar = new Sidebar();
@@ -35,7 +36,7 @@ public class MyForm : Form
     private void ShowCalendar()
     {
         contentArea.Controls.Clear();
-        CalendarView cal = new CalendarView();
+        CalendarView cal = new CalendarView(this.allTasks);
         contentArea.Controls.Add(cal);
     }
 
@@ -45,6 +46,7 @@ public class MyForm : Form
         Application.SetHighDpiMode(HighDpiMode.SystemAware);
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
+        ApplicationConfiguration.Initialize();
         Application.Run(new MyForm());
     }
 }

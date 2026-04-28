@@ -12,3 +12,4 @@ C:\Development\todo-app\obj\Debug\net8.0-windows\refint\App.dll
 C:\Development\todo-app\obj\Debug\net8.0-windows\App.pdb
 C:\Development\todo-app\obj\Debug\net8.0-windows\App.genruntimeconfig.cache
 C:\Development\todo-app\obj\Debug\net8.0-windows\ref\App.dll
+C:\Development\todo-app\obj\Debug\net8.0-windows\App.sourcelink.json

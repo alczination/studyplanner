@@ -21,9 +21,9 @@ public class Sidebar : Panel
     private void SetupButtons()
     {
         AddButton("Dashboard", DockStyle.Top, (s, e) => { MessageBox.Show("Dashboard click");});
-        AddButton("Zadania", DockStyle.Top, (s, e) => { MessageBox.Show("Zadania click"); });
-        AddButton("Kalendarz", DockStyle.Top, (s, e) => CalendarClicked?.Invoke(this, EventArgs.Empty));
-        AddButton("Ustawienia", DockStyle.Bottom, (s, e) => { MessageBox.Show("Ustawienia click"); });
+        AddButton("Todo's", DockStyle.Top, (s, e) => { MessageBox.Show("Zadania click"); });
+        AddButton("Calendar", DockStyle.Top, (s, e) => CalendarClicked?.Invoke(this, EventArgs.Empty));
+        AddButton("Settings", DockStyle.Bottom, (s, e) => { MessageBox.Show("Ustawienia click"); });
     }
 
     private void AddButton(string text, DockStyle dock, EventHandler onClick)
