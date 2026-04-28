@@ -30,7 +30,8 @@ public class CalendarView : Panel
         DateTime startOfWeek = today.AddDays(-1 * difference).Date;
         DateTime endOfWeek = startOfWeek.AddDays(6);
 
-        _headerArea = new Panel // Panel gorny
+    // Header
+        _headerArea = new Panel 
         {
             Dock = DockStyle.Top,
             Height = 38,
@@ -38,6 +39,7 @@ public class CalendarView : Panel
             Padding = new Padding(0,5,0,0)
         };
 
+    // Week range counter
         Label weekRangeLabel = new Label
         {
             Text = $"{startOfWeek:dd.MM} - {endOfWeek:dd.MM}",
@@ -49,14 +51,14 @@ public class CalendarView : Panel
 
         _headerArea.Controls.Add(weekRangeLabel);
 
-        Button addNewTask = new Button // Add-Button
+    // Add-new-task button
+        Button addNewTask = new Button 
         {
             Text = $"Add +",
             Font = new Font("Segoe UI", 14, FontStyle.Bold),
             Location = new Point(weekRangeLabel.Right + 30, 2),
             Size = new Size(100, 35),
             FlatStyle = FlatStyle.Flat,
-            // Dock = DockStyle.Right,
             BackColor = Color.DodgerBlue
         };
         addNewTask.Click += (sender, e) => {addNewTaskForm();};
@@ -65,6 +67,7 @@ public class CalendarView : Panel
         this.Controls.Add(addNewTask);
         this.Controls.Add(_headerArea);
 
+    // Week Grid
         _weekGrid = new TableLayoutPanel
         {
             Dock = DockStyle.Fill,
@@ -97,7 +100,6 @@ public class CalendarView : Panel
             Label lblName = new Label
             {
                 Text = days[i],
-                // TextAlign = ContentAlignment.MiddleCenter,
                 Dock = DockStyle.Top,
                 Height = 25,
                 Font = new Font("Segoe UI", 9, FontStyle.Bold)
@@ -106,12 +108,11 @@ public class CalendarView : Panel
             Label lblDate = new Label
             {
                 Text = currentDay.Day.ToString(),
-                // TextAlign = ContentAlignment.TopCenter,
                 Dock = DockStyle.Fill,
                 ForeColor = Color.Gray,
                 Font = new Font("Segoe UI", 12)
             };
-            
+                // Current Day Marker
             if (currentDay == DateTime.Today)
             {
                 lblDate.ForeColor = Color.DodgerBlue;
@@ -127,7 +128,7 @@ public class CalendarView : Panel
                 Dock = DockStyle.Fill,
                 FlowDirection = FlowDirection.TopDown,
                 AutoScroll = true,
-                WrapContents = false,
+                WrapContents = false
             };
 
             foreach (var task in _tasks)
@@ -139,26 +140,31 @@ public class CalendarView : Panel
                         Text = task.Title,
                         BackColor = Color.LightBlue,
                         ForeColor = Color.Black,
-                        AutoSize = true,
+                        Width = tasksContainer.Width - 50,
+                        Margin = new Padding(5),
+
                     };
                     tasksContainer.Controls.Add(taskLabel);
+                    taskLabel.Click += (sender, e) =>
+                    {
+                        editTaskForm();
+                    };
                 }
             }
-
         _weekGrid.Controls.Add(tasksContainer, i, 1);
-
-            if (i == 0)
-            {
-                Button leftClick = new Button
-                {
-                    Text = "<",
-                    Size = new Size(45, 30),
-                    AutoSize = false,
-                    Location = new Point(25, 60)
-                };
-                this.Controls.Add(leftClick);
-            }
-
+        // Left button
+            // if (i == 0)
+            // {
+            //     Button leftClick = new Button
+            //     {
+            //         Text = "<",
+            //         Size = new Size(45, 30),
+            //         AutoSize = false,
+            //         Location = new Point(25, 60)
+            //     };
+            //     this.Controls.Add(leftClick);
+            // }
+        // Right button
             // if (i == 5)
             // {
             //     Button rightClick = new Button
@@ -180,8 +186,8 @@ public class CalendarView : Panel
         Label title = new Label
         {
             Text = "Add a new task",
-            Font = new Font("Segoe UI", 14, FontStyle.Bold),
-            Location = new Point(220, 100),
+            Font = new Font("Segoe UI", 17, FontStyle.Bold),
+            Location = new Point(60, 30),
             AutoSize = true
         };
 
@@ -189,7 +195,7 @@ public class CalendarView : Panel
         {
             Text = "Name",
             Font = new Font("Segoe UI", 14),
-            Location = new Point(220, 150),
+            Location = new Point(70, 70),
             AutoSize = true
         };
 
@@ -197,7 +203,7 @@ public class CalendarView : Panel
         {
             Multiline = false,
             Size = new Size(300, 150),
-            Location = new Point(300, 150),
+            Location = new Point(150, 70),
             Font = new Font("Segoe UI", 12)
         };
 
@@ -205,13 +211,14 @@ public class CalendarView : Panel
         {
             Text = "Date",
             Font = new Font("Segoe UI", 14),
-            Location = new Point(220, 250),
+            Location = new Point(70, 120),
             AutoSize = true
         };
 
         DateTimePicker _datePicker = new DateTimePicker
         {
-            Location = new Point(220, 350),
+            Font = new Font("Segoe UI", 14),
+            Location = new Point(150, 120),
             Width = 200,
             Format = DateTimePickerFormat.Short,
         };
@@ -219,14 +226,15 @@ public class CalendarView : Panel
         Button AddNewTaskBtn = new Button
         {
             Text = "Add",
-            Location = new Point(220,400),
+            Font = new Font("Segoe UI", 20),
+            Location = new Point(150,400),
             AutoSize = true
         };
 
         Button CloseTabBtn = new Button
         {
-            Text = "X",
-            Location = new Point(800, 200),
+            Text = "Close",
+            Location = new Point(1000, 70),
             AutoSize = true
         };
 
@@ -237,7 +245,6 @@ public class CalendarView : Panel
         this.Controls.Add(_datePicker);
         this.Controls.Add(AddNewTaskBtn);
         this.Controls.Add(CloseTabBtn);
-
         DateTime date =_datePicker.Value;
 
         AddNewTaskBtn.Click += (sender, e) =>
@@ -248,10 +255,10 @@ public class CalendarView : Panel
                 return;
             }
 
-        TaskItem newTask = new TaskItem(_taskTitleBox.Text, date);
+        DateTime selectedDate = _datePicker.Value.Date;
+        TaskItem newTask = new TaskItem(_taskTitleBox.Text, selectedDate);
         _tasks.Add(newTask);
         SetupUI();
-            
         };
 
         CloseTabBtn.Click += (sender, e) =>
@@ -259,4 +266,25 @@ public class CalendarView : Panel
             SetupUI();
         };
      }
+        private void editTaskForm()
+    {
+        this.Controls.Clear();
+
+        Button CloseTabBtn = new Button
+        {
+            Text = "Close",
+            Location = new Point(1000, 70),
+            AutoSize = true
+        };
+
+        this.Controls.Add(CloseTabBtn);
+
+        CloseTabBtn.Click += (sender, e) =>
+        {
+            SetupUI();
+        };
+
+    }
 }
+
+        

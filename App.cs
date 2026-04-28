@@ -8,7 +8,13 @@ public class MyForm : Form
 {
     private Sidebar appSidebar;
     private Panel contentArea;
-    private List<TaskItem> allTasks = new List<TaskItem>();
+    private List<TaskItem> allTasks = new List<TaskItem>
+    {
+        new TaskItem("Spotkanie z klientem", DateTime.Today),
+        new TaskItem("Trening", DateTime.Today.AddDays(1)),
+        new TaskItem("Zakupy", DateTime.Today.AddDays(-1)),
+        new TaskItem("Projekt C#", DateTime.Today.AddDays(2))
+    };
 
     public MyForm()
     {
