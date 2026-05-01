@@ -1,12 +1,98 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Development\\todo-app\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\dev\\active\\StudyPlanner\\studyplanner\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4195E981-2360-7259-32C6-BB2CA129A715}|App.csproj|d:\\dev\\active\\studyplanner\\studyplanner\\app.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4195E981-2360-7259-32C6-BB2CA129A715}|App.csproj|solutionrelative:app.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4195E981-2360-7259-32C6-BB2CA129A715}|App.csproj|d:\\dev\\active\\studyplanner\\studyplanner\\todoview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4195E981-2360-7259-32C6-BB2CA129A715}|App.csproj|solutionrelative:todoview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4195E981-2360-7259-32C6-BB2CA129A715}|App.csproj|d:\\dev\\active\\studyplanner\\studyplanner\\calendarview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4195E981-2360-7259-32C6-BB2CA129A715}|App.csproj|solutionrelative:calendarview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4195E981-2360-7259-32C6-BB2CA129A715}|App.csproj|d:\\dev\\active\\studyplanner\\studyplanner\\sidebar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4195E981-2360-7259-32C6-BB2CA129A715}|App.csproj|solutionrelative:sidebar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.cs",
+              "DocumentMoniker": "D:\\dev\\active\\StudyPlanner\\studyplanner\\App.cs",
+              "RelativeDocumentMoniker": "App.cs",
+              "ToolTip": "D:\\dev\\active\\StudyPlanner\\studyplanner\\App.cs",
+              "RelativeToolTip": "App.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAIwDMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T12:51:58.446Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TodoView.cs",
+              "DocumentMoniker": "D:\\dev\\active\\StudyPlanner\\studyplanner\\TodoView.cs",
+              "RelativeDocumentMoniker": "TodoView.cs",
+              "ToolTip": "D:\\dev\\active\\StudyPlanner\\studyplanner\\TodoView.cs",
+              "RelativeToolTip": "TodoView.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAYwCkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T13:16:24.584Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CalendarView.cs",
+              "DocumentMoniker": "D:\\dev\\active\\StudyPlanner\\studyplanner\\CalendarView.cs",
+              "RelativeDocumentMoniker": "CalendarView.cs",
+              "ToolTip": "D:\\dev\\active\\StudyPlanner\\studyplanner\\CalendarView.cs",
+              "RelativeToolTip": "CalendarView.cs",
+              "ViewState": "AgIAAM4AAAAAAAAAAAAYwAQBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T12:52:08.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Sidebar.cs",
+              "DocumentMoniker": "D:\\dev\\active\\StudyPlanner\\studyplanner\\Sidebar.cs",
+              "RelativeDocumentMoniker": "Sidebar.cs",
+              "ToolTip": "D:\\dev\\active\\StudyPlanner\\studyplanner\\Sidebar.cs",
+              "RelativeToolTip": "Sidebar.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T13:21:59.911Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

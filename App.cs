@@ -1,9 +1,7 @@
 using System;
 using System.Windows.Forms;
 using System.Drawing;
-
 namespace First;
-
 public class MyForm : Form
 {
     private Sidebar appSidebar;
@@ -15,35 +13,38 @@ public class MyForm : Form
         new TaskItem("Zakupy", DateTime.Today.AddDays(-1)),
         new TaskItem("Projekt C#", DateTime.Today.AddDays(2))
     };
-
     public MyForm()
     {
         InitComponents();
     }
     private void InitComponents()
     {
-        this.Text = "Todo App";
-        this.ClientSize = new Size(1400, 750);
-        this.CenterToScreen();
-
+        Text = "Todo App";
+        ClientSize = new Size(1400, 750);
+        CenterToScreen();
         appSidebar = new Sidebar();
-
         contentArea = new Panel
         {
             Dock = DockStyle.Fill,
             BackColor = Color.LightGray
         };
-
         appSidebar.CalendarClicked += (s, e) => ShowCalendar();
-        this.Controls.Add(contentArea);
-        this.Controls.Add(appSidebar);
+        appSidebar.TodosClicked += (s, e) => ShowTodos();
+        Controls.Add(contentArea);
+        Controls.Add(appSidebar);
     }
-
     private void ShowCalendar()
     {
         contentArea.Controls.Clear();
         CalendarView cal = new CalendarView(this.allTasks);
         contentArea.Controls.Add(cal);
+    }
+
+    private void ShowTodos()
+    {
+        contentArea.Controls.Clear();
+        TodoView todoView = new TodoView(this.allTasks);
+        contentArea.Controls.Add(todoView);
     }
 
     [STAThread]
